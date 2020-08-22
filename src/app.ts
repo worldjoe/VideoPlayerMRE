@@ -467,9 +467,9 @@ export default class VideoPlayer
 		const options =
 		{
 			//looping: this.loop,
-			rolloffStartDistance: 1,
+			rolloffStartDistance: 3,
 			spread: 0.6,
-			volume: 0.5,
+			volume: 1,
 			visible: true
 		};
 
