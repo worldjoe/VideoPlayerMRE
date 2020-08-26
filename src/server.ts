@@ -11,6 +11,8 @@ process.on('unhandledRejection', (reason) => console.log('unhandledRejection', r
  // Start listening for connections, and serve static files
  // Note that process.env.BASE_URL/PORT variables will automatically be used if defined in the .env file
 const server = new WebHost({
+   baseUrl: 'http://162.255.23.205:3901',
+   port: 3901,
    baseDir: resolvePath(__dirname, '../public'),
    optionalPermissions: [Permissions.UserInteraction]
 });
