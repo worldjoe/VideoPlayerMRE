@@ -10,9 +10,11 @@ export default class VideoPlayer {
         this.context.onStarted(() => this.init());
     }
 
-    private async init() {
+    private async init(): Promise<boolean> {
         this.videoStream = this.assets.createVideoStream('videoStream', { uri: "https://www.youtube.com/watch?v=nqOU2CGeAvk" });
         let test = MRE.Actor.Create(this.context, { });
+	await Promise.all([test.created()]);
         test.startVideoStream(this.videoStream.id, { volume: 0.5 });
+	return true;
     }
 }
