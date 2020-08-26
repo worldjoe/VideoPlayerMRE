@@ -5,7 +5,7 @@ export default class VideoPlayer {
     private assets: MRE.AssetContainer;
     private videoStream: MRE.VideoStream;
 
-    constructor(private context: MRE.Context, private params: MRE.ParameterSet) {
+    constructor(private context: MRE.Context) {
         this.assets = new MRE.AssetContainer(context);
         this.context.onStarted(() => this.init());
     }

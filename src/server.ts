@@ -18,6 +18,6 @@ const server = new WebHost({
 });
 
 // Handle new application sessions
-server.adapter.onConnection((context, params) => new VideoPlayer(context, params));
+server.adapter.onConnection(context => new VideoPlayer(context));
 
 export default server;
